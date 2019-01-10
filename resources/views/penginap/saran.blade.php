@@ -58,7 +58,7 @@
                 <h3 class="mb-5">Paragraph</h3>
                 <p class="mb-5"><img src="{{ asset('images/img_4.jpg') }}" alt="" class="img-fluid"></p>
                 <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae labore aspernatur cumque inventore voluptatibus odit doloribus! Ducimus, animi perferendis repellat. Ducimus harum alias quas, quibusdam provident ea sed, sapiente quo.</p>
-                <p class="text-dark">Ullam cumque eveniet, fugiat quas maiores, non modi eos deleniti minima, nesciunt assumenda sequi vitae culpa labore nulla! Cumque vero, magnam ab optio quidem debitis dignissimos nihil nesciunt vitae impedit!</p>
+                <p class="text-dark">Ullam cumque eveniet, fugiat quas maiores, non modi eos deleniti minima, nesciunt assumenda sequi vitae culpa labore nulla! Cumque vero, magnam ab optio quidem debitis dignissimos nihil nesciunt vitae impedit!!!</p>
               </div>
         </div>
       </div>
