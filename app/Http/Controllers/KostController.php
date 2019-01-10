@@ -32,7 +32,7 @@ class KostController extends Controller
     {
     	$kost = Kost::all();
 
-    	return view('kost.index');
+    	return view('admin.kost.index');
     }
 
     public function edit($id)

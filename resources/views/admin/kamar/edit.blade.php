@@ -2,6 +2,10 @@
 @section('title')
 Edit Kamar
 @endsection
+@endsection
+@section('navbar')
+ Edit Kost
+@endsection
 @section('content')
 <div class="container">
   <div class="row justify-content-center">

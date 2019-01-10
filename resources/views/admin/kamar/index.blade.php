@@ -3,6 +3,7 @@
 Kamar Kost Dashboard
 @endsection
 @section('content')
+<body style="background-image: url(http://tremendouswallpapers.com/wp-content/uploads/2014/12/Luxury-Living-Room-2560x1440.jpg); background-repeat: no-repeat;" >
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8">

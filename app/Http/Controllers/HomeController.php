@@ -31,7 +31,7 @@ class HomeController extends Controller
             return redirect(url('/admin/kamar/all'));
         }
         elseif (Auth::user()->status == "2" && Auth::user()->role == "2") {
-            return redirect(url('/admin/verifikasi'));
+            return redirect(url('/user/verifikasi'));
         }
     }
 
