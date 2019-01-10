@@ -25,30 +25,6 @@ Route::get('/kost/edit', function(){
 	return view('kost.edit');
 });
 
-Route::prefix('kamar')->group(function()
-{
-	
-});
-
-Route::prefix('kost')->group(function()
-{	
-	
-});
-
-Route::prefix('saran')->group(function()
-{
-	
-});
-
-Route::prefix('penginap')->group(function()
-{
-	
-});
-
-Route::prefix('pesanan')->group(function()
-{
-
-});
 Auth::routes();
 
 Route::get('/', 'HomeController@index');
@@ -74,21 +50,6 @@ Route::group(['prefix' => 'user'] , function(){
 		Route::get('/penginap/all', 'PenginapController@all');
 		Route::get('/pesanan/all', 'PesananController@all');
 		Route::get('/saran/all', 'SaranController@all');
-
-		
-		Route::get('/add', 'KamarController@add');//KAMAR
-		Route::post('/save', 'KamarController@save');
-		Route::get('/all', 'KamarController@all');
-		Route::post('/update', 'KamarController@update');
-		Route::get('/edit/{id}', 'KamarController@edit');
-		Route::get('/delete/{id}', 'KamarController@delete');//KAMAR
-
-		Route::get('/add', 'KostController@add');//KOS
-		Route::post('/save', 'KostController@save');
-		Route::get('/all', 'KostController@all');
-		Route::post('/update', 'KostController@update');
-		Route::get('/edit/{id}', 'KostController@edit');
-		Route::get('/delete/{id}', 'KostController@delete');//KOS
 
 		Route::post('/save', 'PenginapController@save');//PENGINAP
 		Route::get('/penginap/all', 'PenginapController@all');
