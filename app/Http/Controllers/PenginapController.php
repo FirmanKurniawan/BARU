@@ -39,6 +39,6 @@ class PenginapController extends Controller
         $profile->email = $email;
         $profile->save();
 
-        return redirect('penginap/profile');
+        return redirect('user/penginap/profile');
     }
 }

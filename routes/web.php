@@ -27,53 +27,27 @@ Route::get('/kost/edit', function(){
 
 Route::prefix('kamar')->group(function()
 {
-	Route::get('/add', 'KamarController@add');
-	Route::post('/save', 'KamarController@save');
-	Route::get('/all', 'KamarController@all');
-	Route::post('/update', 'KamarController@update');
-	Route::get('/edit/{id}', 'KamarController@edit');
-	Route::get('/delete/{id}', 'KamarController@delete');
+	
 });
 
 Route::prefix('kost')->group(function()
 {	
-	Route::get('/add', 'KostController@add');
-	Route::post('/save', 'KostController@save');
-	Route::get('/all', 'KostController@all');
-	Route::post('/update', 'KostController@update');
-	Route::get('/edit/{id}', 'KostController@edit');
-	Route::get('/delete/{id}', 'KostController@delete');
+	
 });
 
 Route::prefix('saran')->group(function()
 {
-	Route::post('/save', 'SaranController@save');
-	Route::get('/all', 'SaranController@all');
-	Route::post('/update', 'SaranController@update');
-	Route::get('/edit/{id}', 'SaranController@edit');
-	Route::get('/delete/{id}', 'SaranController@delete');
+	
 });
 
 Route::prefix('penginap')->group(function()
 {
-	Route::post('/save', 'PenginapController@save');
-	Route::get('/all', 'PenginapController@all');
-	Route::post('/update', 'PenginapController@update');
-	Route::get('/edit/{id}', 'PenginapController@edit');
-	Route::get('/delete/{id}', 'PenginapController@delete');
-	Route::get('/kos', 'PenginapController@all');
-	Route::get('/saran', 'PenginapController@saran');
-	Route::get('/profile', 'PenginapController@profile');
-	Route::get('/kost', 'KostController@datakos');
+	
 });
 
 Route::prefix('pesanan')->group(function()
 {
-	Route::post('/save', 'PesananController@save');
-	Route::get('/all', 'PesananController@all');
-	Route::post('/update', 'PesananController@update');
-	Route::get('/edit/{id}', 'PesananController@edit');
-	Route::get('/delete/{id}', 'PesananController@delete');
+
 });
 Auth::routes();
 
@@ -100,5 +74,37 @@ Route::group(['prefix' => 'user'] , function(){
 		Route::get('/penginap/all', 'PenginapController@all');
 		Route::get('/pesanan/all', 'PesananController@all');
 		Route::get('/saran/all', 'SaranController@all');
+
+		
+		Route::get('/add', 'KamarController@add');//KAMAR
+		Route::post('/save', 'KamarController@save');
+		Route::get('/all', 'KamarController@all');
+		Route::post('/update', 'KamarController@update');
+		Route::get('/edit/{id}', 'KamarController@edit');
+		Route::get('/delete/{id}', 'KamarController@delete');//KAMAR
+
+		Route::get('/add', 'KostController@add');//KOS
+		Route::post('/save', 'KostController@save');
+		Route::get('/all', 'KostController@all');
+		Route::post('/update', 'KostController@update');
+		Route::get('/edit/{id}', 'KostController@edit');
+		Route::get('/delete/{id}', 'KostController@delete');//KOS
+
+		Route::post('/save', 'PenginapController@save');//PENGINAP
+		Route::get('/penginap/all', 'PenginapController@all');
+		Route::post('/penginap/update', 'PenginapController@update');
+		Route::get('/edit/{id}', 'PenginapController@edit');
+		Route::get('/delete/{id}', 'PenginapController@delete');
+		Route::get('/penginap/kos', 'PenginapController@all');
+		Route::get('/penginap/saran', 'PenginapController@saran');
+		Route::get('/penginap/profile', 'PenginapController@profile');
+		Route::get('/penginap/kost', 'KostController@datakos');//PENGINAP
+
+		Route::post('/save', 'PesananController@save');//PESANAN
+		Route::get('/all', 'PesananController@all');
+		Route::post('/update', 'PesananController@update');
+		Route::get('/edit/{id}', 'PesananController@edit');
+		Route::get('/delete/{id}', 'PesananController@delete');//PESANAN
+
 	});
 });

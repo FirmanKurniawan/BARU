@@ -7,7 +7,7 @@
           <div class="col-md-6">
             <h3>Photo</h3>
             <h2 class="mb-5"><img src="{{ asset('img/person_2.jpg')}}" style="width: 150px;"></h2>
-          <form action="/penginap/update" method="post">
+          <form action="{{url('/user/penginap/update')}}" method="post">
           @csrf
                   <div class="row">
                     <div class="col-md-12 form-group">

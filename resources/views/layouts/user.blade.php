@@ -37,19 +37,19 @@
 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url('/penginap/all')}}">Halaman Utama</a>
+                <a class="nav-link" href="{{ url('/user/penginap/all')}}">Halaman Utama</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url('/penginap/kost') }}">Cari Kos</a>
+                <a class="nav-link" href="{{ url('/user/penginap/kost') }}">Cari Kos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url('/penginap/saran')}}">Saran</a>
+                <a class="nav-link" href="{{ url('/user/penginap/saran')}}">Saran</a>
               </li>
 
              <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="rooms.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{asset ('/images/person_2.jpg')}}" style="width: 30px;">{{ Auth::user()->name }}</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="{{ url('/penginap/profile')}}">Edit Profile</a>
+                  <a class="dropdown-item" href="{{ url('/user/penginap/profile')}}">Edit Profile</a>
                   <a class="dropdown-item" href="\3">Logout</a>
               </div>
             </ul>
