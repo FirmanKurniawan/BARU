@@ -1,73 +1,60 @@
-@extends('layouts.app')
+    
+    <!DOCTYPE html>
+<html lang="en">
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Form by Tooplate</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/tooplate.css">
+</head>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+<body id="login">
+    <div class="container">
+        <div class="row tm-register-row tm-mb-35">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 tm-login-l">
+                <form action="" method="post" class="tm-bg-black p-5 h-100" action="{{ route('login')}}" style="border-radius: 20px;">
                         @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                    <div class="input-field">
+                        <input placeholder="Email" id="username" name="email" type="text" class="validate">
+                    </div>
+                    <div class="input-field mb-5">
+                        <input placeholder="Password" id="password" name="password" type="password" class="validate">
+                    </div>
+                    <div class="tm-flex-lr">
+                        <a href="#" class="white-text small">Forgot Password?</a>
+                        <button type="submit" class="waves-effect btn-large btn-large-white px-4 black-text rounded-0">Login</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 tm-login-r">
+                <header class="font-weight-light tm-bg-black p-5 h-100" style="border-radius: 10px;">
+                    <h3 class="mt-0 text-white font-weight-light">Login</h3>
+                    <p>Papi-Kost</p>
+                    <p>Menyiapkan Segala Macam Kost</p>
+                    
+                </header>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ml-auto mr-0 text-center">
+                <a href="{{ url('register')}}" class="waves-effect btn-large btn-large-white px-4 black-text rounded-0">Create New Account</a>
             </div>
         </div>
     </div>
-</div>
-@endsection
+
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
+</body>
+
+</html>

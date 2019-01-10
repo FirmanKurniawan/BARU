@@ -10,6 +10,18 @@ Add User
         <div class="card-header">Add Kamar</div>
         <div class="card-body">
          <form action="{{url('kamar/save')}}" method="POST">
+         <div class="form-group">
+            <label for="formGroupExampleInput">Pilih Kost</label>
+            <?php
+              $kost = \App\Kost::all();
+            ?>
+            <select class="form-control" name="nama_kost" required>
+              <option selected>Pilih Satu</option>
+              @foreach($kost as $q)
+              <option value="{{$q->nama_kost}}">{{$q->nama_kost}}</option>
+              @endforeach
+            </select>
+          </div>
           <div class="form-group">
             <label for="formGroupExampleInput">Tipe Kamar</label>
             <input type="text" class="form-control" name="tipe_kamar" id="formGroupExampleInput" 

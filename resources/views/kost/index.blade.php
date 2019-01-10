@@ -2,7 +2,6 @@
 @section('title') 
 Index Kost
 @endsection
-@endsection
 @section('navbar')
  Daftar Kost
 @endsection
@@ -38,8 +37,8 @@ Index Kost
                       <td>{{$q->kontak_kost}}</td>
                       <td>{{$q->wilayah_kost}}</td>
                       <td>
-                      <a href="{{ url('kost/edit'.$q->id)}}" class="btn btn-outline-warning btn-sm"><i class="fa fa-edit"> Edit</i></a>
-                       <a href="{{ url('kost/Delete'.$q->id)}}" onclick="return confirm('anda yakin untuk menghapusnya ?')" 
+                      <a href="{{ url('kost/edit/'.$q->id)}}" class="btn btn-outline-warning btn-sm"><i class="fa fa-edit"> Edit</i></a>
+                       <a href="{{ url('kost/delete/'.$q->id)}}" onclick="return confirm('anda yakin untuk menghapusnya ?')" 
                        class="btn btn-outline-danger btn-sm"><i class="fa fa-trash"> Delete</i></a>
                     </td>
                     </tr>
@@ -48,7 +47,7 @@ Index Kost
                 </table>
               <hr>
               <li class="list-group-item float-right">
-                <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus-circle"></i></a>
+                <a href="{{ url('kost/add')}}" class="btn btn-primary btn-sm"><i class="fa fa-plus-circle"></i></a>
               </li>
             </div>
           </div>

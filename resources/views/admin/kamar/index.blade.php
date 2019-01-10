@@ -14,6 +14,7 @@ Kamar Kost Dashboard
             <thead>
               <tr>
                 <th scope="col">#</th>
+                <th scope="col">Nama Kost</th>
                 <th scope="col">Tipe Kamar</th>
                 <th scope="col">Harga</th>
                 <th scope="col">Deskripsi Kamar</th>
@@ -26,10 +27,13 @@ Kamar Kost Dashboard
               <?php
               $i= 1;
               $kamar = \App\Kamar::all();
+              $kost = \App\Kost::all();
               ?>
               @foreach($kamar as $q)
+              @foreach($kost as $z)
               <tr>
                 <th scope="row">{{$i++}}</th>
+                <td>{{$z->nama_kost}}</td>
                 <td>{{$q->tipe_kamar}}</td>
                 <td>{{$q->harga}}</td>
                 <td>{{$q->deskripsi_kamar}}</td>
@@ -41,6 +45,7 @@ Kamar Kost Dashboard
                  class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"> Delete</i></a>
               </td>
               </tr>
+              @endforeach
               @endforeach
             </tbody>
           </table>

@@ -14,9 +14,11 @@
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
-  <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+  <link href="../../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link href="{{asset('assets/demo/demo.css')}}" rel="stylesheet" />
+  <link href="{{asset('css/new.css')}}" rel="stylesheet" />
+
 </head>
 
 <body class="">
@@ -28,41 +30,47 @@
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
+        <a class="simple-text"><img src="{{asset('images/papi-kost.png')}}" style="width: 50%;">
+          <br>
+          Papi KOS
         </a>
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
-            <a class="nav-link" href="#">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url('admin') }}">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item active">
             <a class="nav-link" href="{{ url('/kost/all') }}">
               <i class="material-icons">person</i>
               <p>Daftar Kost</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item active">
             <a class="nav-link" href="{{ url('/kamar/all') }}">
               <i class="material-icons">content_paste</i>
               <p>Daftar Kamar</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="{{ url('/admin/datauser')}}">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url('/admin/datauser') }}">
               <i class="material-icons">library_books</i>
               <p>Daftar Akun</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="#">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
               <i class="material-icons">bubble_chart</i>
               <p>Logout</p>
             </a>
+             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                 @csrf
+            </form>
           </li>
         </ul>
       </div>
@@ -87,22 +95,22 @@
           <nav class="float-left">
             <ul>
               <li>
-                <a href="https://www.creative-tim.com">
+                <a href="#">
                   Capstone Indonesia
                 </a>
               </li>
               <li>
-                <a href="https://creative-tim.com/presentation">
+                <a href="#">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="http://blog.creative-tim.com">
+                <a href="#">
                   Blog
                 </a>
               </li>
               <li>
-                <a href="https://www.creative-tim.com/license">
+                <a href="#">
                   Licenses
                 </a>
               </li>
@@ -113,13 +121,13 @@
             <script>
               document.write(new Date().getFullYear())
             </script>, made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+            <a href="#" target="_blank">Capstone Indonesia</a> for a better web.
           </div>
         </div>
       </footer>
     </div>
   </div>
-  <div class="fixed-plugin">
+  <!-- <div class="fixed-plugin">
     <div class="dropdown show-dropdown">
       <a href="#" data-toggle="dropdown">
         <i class="fa fa-cog fa-2x"> </i>
@@ -159,34 +167,9 @@
           <a class="img-holder switch-trigger" href="javascript:void(0)">
             <img src="../assets/img/sidebar-4.jpg" alt="">
           </a>
-        </li>
-        <li class="button-container">
-          <a href="https://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-primary btn-block">Free Download</a>
-        </li>
-        <!-- <li class="header-title">Want more components?</li>
-            <li class="button-container">
-                <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
-                  Get the pro version
-                </a>
-            </li> -->
-        <li class="button-container">
-          <a href="https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
-            View Documentation
-          </a>
-        </li>
-        <li class="button-container github-star">
-          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
-        </li>
-        <li class="header-title">Thank you for 95 shares!</li>
-        <li class="button-container text-center">
-          <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
-          <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
-          <br>
-          <br>
-        </li>
       </ul>
     </div>
-  </div>
+  </div> -->
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>

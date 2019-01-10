@@ -1,77 +1,71 @@
-@extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+    <!DOCTYPE html>
+<html lang="en">
+ 
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+<body id="register">
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register - Input Form by Tooplate</title>
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/tooplate.css">
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+    <div class="container">
+        <div class="row tm-register-row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 tm-register-col-l">
+                <form class="tm-bg-black p-5 h-100" method="post" action="{{ route('register')}}" style="border-radius: 20px;">
+                    @csrf
+                    <div class="input-field">
+                        <input placeholder="Name" id="first_name" name="name" type="text" class="validate">
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Email" id="last_name" name="email" type="email" class="validate">
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Password" id="email" name="password" type="password" class="validate">
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Confirm Password" id="mobile" name="password_confirmation" type="password" class="validate">
+                    </div>
+                    
+                    <div class="text-right mt-4">
+                        <button type="submit" class="waves-effect btn-large btn-large-white px-4 black-text">SUBMIT</button>
+                        
+                    </div>
+                
+                </form>
             </div>
-        </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 tm-register-col-r">
+                <form class="tm-bg-black">
+                <header class="mb-5">
+                    <h3 class="mt-0 text-white">Register</h3>
+                    <h6 class="mt-0 text-white font-weight-light">
+                    <p>Buat Akan Anda disini!!</p>
+                    <p>Silakan Tunggu Akun Anda diKonfimasi</p></h6><br><br><br><br><br>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ml-auto mr-0 text-center" style="justify-content: center; border-radius: 10px;">
+                                <a href="{{ url('login')}}" class="waves-effect btn-large btn-large-white px-4 black-text rounded-0">Login</a>
+                        </div>
+                    </div>
+                </form>
+                </header>  
+            </div>
+                 
+        
+        
     </div>
-</div>
-@endsection
+
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
+</body>
+
+</html>

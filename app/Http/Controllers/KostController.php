@@ -7,6 +7,7 @@ use \App\Kamar;
 use \App\Kost;
 use \App\Penginap;
 use \App\Pesanan;
+
 class KostController extends Controller
 {
     public function save(Request $r)
@@ -25,21 +26,21 @@ class KostController extends Controller
     	$kost->wilayah_kost = $wilayah_kost;
     	$kost->save();
 
-    	return view('kost.index');
+    	return redirect(url('kost/all'));
     }
 
     public function all()
     {
     	$kost = Kost::all();
 
-    	return view('admin.kost.index');
+    	return view('kost.index');
     }
 
     public function edit($id)
     {
     	$kost = Kost::find($id);
 
-    	return view('kost.edit');
+    	return view('kost.edit')->with('kost',$kost);;
     }
 
     public function update(Request $r)
@@ -59,13 +60,25 @@ class KostController extends Controller
     	$kost->wilayah_kost = $wilayah_kost;
     	$kost->save();
 
-    	return view('kost.index');
+    	return redirect(url('kost/all'));
     }
 
     public function delete($id)
     {
     	$kost = Kost::find($id);
+        $kost->delete(); 
+    	return redirect(url('kost/all'));
+    }
 
-    	return view('kost.index');
+    public function add()
+    {
+        return view('kost.add');
+    }
+
+    public function datakos()
+    {
+        $datakos = Kost::all();
+
+        return view('penginap.kos', compact('datakos'));
     }
 }

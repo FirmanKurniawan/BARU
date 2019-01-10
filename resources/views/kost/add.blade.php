@@ -37,12 +37,19 @@
                   <label for="formGroupExampleInput">Wilayah Kost</label>
                   <input type="text" class="form-control" name="wilayah_kost" id="formGroupExampleInput"  required>
                 </div>
+                <div class="form-group col-md-6" style="margin-top: 5%;">
+                  <label for="formGroupExampleInput">Wilayah Kost</label>
+                  <input type="file" class="form-control" name="wilayah_kost" id="formGroupExampleInput"  required>
+                </div>
                 @csrf
-                <a class="" type="submit"><i class="fa fa-plus-square" style="color: red;"></i></a>
+                <button class="btn btn-outline-red" type="submit"><i class="fa fa-plus-square" style="color: red;"></i></button>
+
+              </div>
             </form>
           </div>
           </div>
           </div>
-        </div>
-      </div>
+          </div>
+          </div>
+</div>
 @endsection

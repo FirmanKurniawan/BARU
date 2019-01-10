@@ -2,7 +2,6 @@
 @section('title')
 Edit Kamar
 @endsection
-@endsection
 @section('navbar')
  Edit Kost
 @endsection

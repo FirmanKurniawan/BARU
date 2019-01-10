@@ -2,13 +2,16 @@
 @section('title') 
 Edit Kost
 @endsection
+@section('navbar')
+ Ubah Data Kost
+@endsection
 @section('content')
 <div class="container" >
         <div class="row justify-content-center">
           <div class="col-md-8">
             <div class="card">
               <div class="card-body">
-               <form action="{{url('kost/Update')}}" method="POST" enctype="multipart/form-data">
+               <form action="{{url('kost/update')}}" method="POST" enctype="multipart/form-data">
                 <div class="form-row">
                 <div class="form-group col-md-6" style="margin-top: 5%;">
                   <label for="formGroupExampleInput">Nama Kost</label>
@@ -46,4 +49,5 @@ Edit Kost
           </div>
         </div>
       </div>
+    </div>
 @endsection
