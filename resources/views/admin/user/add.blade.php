@@ -22,7 +22,7 @@ Add User
           </div>
           <div class="form-group">
             <label for="formGroupExampleInput">Password</label>
-            <input type="password" class="form-control" name="password" id="formGroupExampleInput" 
+            <input type="password" encrypt="true" class="form-control" name="password" id="formGroupExampleInput" 
             placeholder="Password" required>
           </div>
 

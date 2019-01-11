@@ -19,7 +19,7 @@
                 </div>
                 <div class="form-group col-md-6" style="margin-top: 5%;">
                   <label for="formGroupExampleInput">Jumlah Kamar</label>
-                  <input type="number" class="form-control" name="jumlah_kamar" id="formGroupExampleInput"  required>
+                  <input type="text" class="form-control" name="jumlah_kamar" id="formGroupExampleInput"  required>
                 </div>
               </div>
               <div class="form-row">
@@ -37,13 +37,12 @@
                   <label for="formGroupExampleInput">Wilayah Kost</label>
                   <input type="text" class="form-control" name="wilayah_kost" id="formGroupExampleInput"  required>
                 </div>
-                <div class="form-group col-md-6" style="margin-top: 5%;">
-                  <label for="formGroupExampleInput">Wilayah Kost</label>
-                  <input type="file" class="form-control" name="wilayah_kost" id="formGroupExampleInput"  required>
+                <div style="margin-top: 5%;">
+                  <label for="formGroupExampleInput">Gambar</label>
+                  <input type="file" name="gambar_kost" id="formGroupExampleInput"  required>
                 </div>
                 @csrf
-                <button class="btn btn-outline-red" type="submit"><i class="fa fa-plus-square" style="color: red;"></i></button>
-
+                <button class="btn btn-outline" type="submit" style="color: purple;"><i class="fa fa-plus-square"></i></button>
               </div>
             </form>
           </div>

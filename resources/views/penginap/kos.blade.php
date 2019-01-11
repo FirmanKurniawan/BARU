@@ -14,6 +14,9 @@
 </div>
 
 <!-- BATAS MULAI -->
+          <?php
+          $datakos = \App\Kost::all();
+          ?>
           @foreach($datakos as $datakoss)
           <div class="col-md-4">
             <div class="post-entry" style="margin-top: 40px;">

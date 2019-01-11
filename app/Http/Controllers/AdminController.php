@@ -37,7 +37,7 @@ class AdminController extends Controller
         $n = new User;
         $n->name = $r->input('name');
         $n->email = $r->input('email');
-        $n->password = $r->input('password');
+        $n->password = bcrypt($r->input('password'));
         $n->status = $r->input('status');
         $n->role = $r->input('role');
         $n->save();

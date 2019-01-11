@@ -20,6 +20,7 @@ class CreateKostsTable extends Migration
             $table->string('alamat_kost');
             $table->string('kontak_kost');
             $table->string('wilayah_kost');
+            $table->string('gambar_kost');
             $table->timestamps();
         });
     }
